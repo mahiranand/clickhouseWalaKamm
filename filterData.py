@@ -713,6 +713,8 @@ def filterData(database):
                                                         }
 
                 if(data_dict["event_name"] ==  "PAGE_OPENED"):
+                    if(data_dict.get("optional_payload") is not None):
+                        data_dict.pop('optional_payload')
                     if(data_dict.get("campaign_details") is None):
                         data_dict["campaign_details"] = {
                                                             "campaign_id": None,
