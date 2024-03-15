@@ -713,13 +713,13 @@ def filterData(database):
                                                         }
 
                 if(data_dict["event_name"] ==  "PAGE_OPENED"):
-                    if(data_dict.get("interaction_details") is not None):
+                    if("inetraction_details" in data_dict):
                         data_dict.pop('interaction_details')
-                    if(data_dict.get("arrivaltimestamp") is not None):
+                    if("optional_payload" in data_dict):
                         data_dict.pop('arrivaltimestamp')
-                    if(data_dict.get("arrivaldate") is not None):
+                    if("arrivaldate" in data_dict):
                         data_dict.pop('arrivaldate')
-                    if(data_dict.get("optional_payload") is not None):
+                    if("arrivaltime" in data_dict):
                         data_dict.pop('optional_payload')
                     if(data_dict.get("campaign_details") is None):
                         data_dict["campaign_details"] = {
