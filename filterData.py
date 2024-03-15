@@ -54,7 +54,7 @@ def filterData(database):
         one_hour_ago = current_time - timedelta(hours=1)
         hour = one_hour_ago.hour
 
-        if collection_name.startswith(str("")):
+        if collection_name.startswith(str(10)):
 
             collection = database[collection_name]
             data = list(collection.find({}, {"_id": 0}))
